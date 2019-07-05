@@ -6,6 +6,12 @@ This project jskey-crypt has to do with creating, and exporting an encrypted blo
 
 ## 1 - Create a _posts_crypt from nothing ( starting a new project )
 
+To create a new project use the init command. A target options can be used to set the folder name from the current working directory, and a key option can be used to set the encryption key that will be stored in the keys.yaml file.
+
+```
+$ jskey init -t blog_posts -k spaceballs-0123456789-abcdefghi!
+```
+
 ## 2 - Create a _posts_crypt folder from a _posts folder ( encrypting existing markdown source files )
 
 ## 3 - Create a _posts folder from a _posts_crypt folder ( unencrypting an existing _posts_crypt folder with a keys.yaml file)
