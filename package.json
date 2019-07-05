@@ -1,25 +1,28 @@
 {
-  "name": "jskey-crypt",
-  "version": "1.0.0",
-  "description": "So I started a project called jskey that aims to be a markdown editor, and keyword database management tool that has a great deal a functionality and features both built in and extensible via a plug-in system. However I did not get far, as I think that I was trying to do way to much all within a single application. So now I am trying out an approach that involves breaking things down into a whole bunch of smaller independent applications that can potentialy be used together.",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dustinpfister/jskey-crypt.git"
-  },
-  "author": "Dustin Pfister",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/dustinpfister/jskey-crypt/issues"
-  },
-  "homepage": "https://github.com/dustinpfister/jskey-crypt#readme",
-  "dependencies": {
-    "yargs": "^13.2.4"
-  }
+    "name": "jskey-crypt",
+    "version": "1.0.0",
+    "description": "So I started a project called jskey that aims to be a markdown editor, and keyword database management tool that has a great deal a functionality and features both built in and extensible via a plug-in system. However I did not get far, as I think that I was trying to do way to much all within a single application. So now I am trying out an approach that involves breaking things down into a whole bunch of smaller independent applications that can potentialy be used together.",
+    "main": "index.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "bin": {
+        "jskey-crypt": "./index.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dustinpfister/jskey-crypt.git"
+    },
+    "author": "Dustin Pfister",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/dustinpfister/jskey-crypt/issues"
+    },
+    "homepage": "https://github.com/dustinpfister/jskey-crypt#readme",
+    "dependencies": {
+        "yargs": "^13.2.4"
+    }
 }
