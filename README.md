@@ -1,6 +1,6 @@
 # jskey-crypt
 
-So I started a project called jskey that aims to be a markdown editor, and keyword database management tool that has a great deal a functionality and features both built in and extensible via a plug-in system. However I did not get far, as I think that I was trying to do way to much all within a single application. So now I am trying out an approach that involves breaking things down into a whole bunch of smaller independent applications that can potential be used together.
+So I started a project called jskey that aims to be a markdown editor, and keyword database management tool that has a great deal a functionality and features both built in and extensible via a plug-in system. However I did not get far, as I think that I was trying to do way to much all within a single application. So now I am trying out an approach that involves breaking things down into a whole bunch of smaller independent applications that can potentialy be used together.
 
 This project jskey-crypt has to do with creating, and exporting an encrypted blog posts folder, as well as the keyword database also. In any case it just has one little thing that it needs to do and it is not much of anything more beyond that.
 
