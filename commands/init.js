@@ -35,7 +35,7 @@ let makeKeyFile = (dir_project, key) => {
 // make first post
 let makeFirstPost = function (dir, opt_crypt) {
     return new Promise((resolve, reject) => {
-        fs.readFile('../README.md', 'utf8', (e, text) => {
+        fs.readFile('README.md', 'utf8', (e, text) => {
             if (e) {
                 text = 'first post file not found';
             }
