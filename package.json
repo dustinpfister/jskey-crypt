@@ -23,6 +23,7 @@
     },
     "homepage": "https://github.com/dustinpfister/jskey-crypt#readme",
     "dependencies": {
+        "js-yaml": "^3.13.1",
         "yargs": "^13.2.4"
     }
 }
