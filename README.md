@@ -4,7 +4,19 @@ So I started a project called jskey that aims to be a markdown editor, and keywo
 
 This project jskey-crypt has to do with creating, and exporting an encrypted blog posts folder, as well as the keyword database also. In any case it just has one little thing that it needs to do and it is not much of anything more beyond that.
 
-## 1 - Create a _posts_crypt from nothing ( starting a new project )
+## Install
+
+So I have not published this to npm, and I have no plans to do so. So the process of installing this involves cloning the project down and then installing with npm.
+
+```
+$ git clone --depth 1 https://github.com/dustinpfister/jskey-crypt
+$ cd jskey-crypt
+$ npm install -g
+```
+
+The project should be installed globally, as this is a command line tool intended to be used in more than one file system location.
+
+## init command - Create a _posts_crypt from nothing ( starting a new project )
 
 To create a new project use the init command. A target options can be used to set the folder name from the current working directory, and a key option can be used to set the encryption key that will be stored in the keys.yaml file.
 
@@ -12,7 +24,7 @@ To create a new project use the init command. A target options can be used to se
 $ jskey-crypt init -t blog_posts -k spaceballs-0123456789-abcdefghi!
 ```
 
-## 2 - unencrypt a single file for reading from _posts_crypt
+## read command - unencrypt a single file for reading from _posts_crypt
 
 To read a file from the _posts_crypt folder use the read command. The target option can be used to set the location of the _posts_crypt folder if not calling from the root name space of the blog_posts project folder. The k option can be used to set the location of the key.yaml file. and the f option can be used to set the file name of the file that I want to read in the _posts_crypt folder.
 
@@ -20,7 +32,7 @@ To read a file from the _posts_crypt folder use the read command. The target opt
 $ jskey-crypt read -t ./blog_posts/_posts_crypt -k ./blog_posts/key.yaml -f 1.md
 ```
 
-## 3 - encript and write a single file to _posts_crypt
+## write command - encript and write a single file to _posts_crypt
 
 The write command works more or less the same way as read only I use the s potion to set the location of the source file that is to be written to the _posts_crypt folder. The f option is not used to set the file name that is to be written rather than read.
 
