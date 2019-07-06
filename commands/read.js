@@ -48,7 +48,6 @@ exports.handler = function (argv) {
     readFile(argv.k)
     .then((data) => {
         let key = yaml.safeLoad(data);
-        console.log(key);
         return readFile(path_file, {
             password: key.key
         })
