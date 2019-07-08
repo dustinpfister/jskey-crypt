@@ -3,23 +3,6 @@ yaml = require('js-yaml'),
 fs = require('fs'),
 simpleC = require('../lib/simple_crypt');
 
-let writeFile = (path_file, text, opt_simpleC) => {
-    return new Promise((resolve, reject) => {
-        let data = text;
-        if (opt_simpleC) {
-            data = simpleC.toHex(text, opt_simpleC);
-        }
-        console.log('data:');
-        console.log(data);
-        fs.writeFile(path_file, data, 'utf8', (e, data) => {
-            if (e) {
-                reject(e);
-            } else {
-                resolve();
-            }
-        });
-    });
-};
 
 // READ COMMAND
 exports.command = 'write';
@@ -60,7 +43,7 @@ exports.handler = function (argv) {
     })
     .then((data) => {
         // write file to _post_crypt
-        return writeFile(path_file, data, {
+        return simpleC.writeFile(path_file, data, {
             password: key.key
         });
     })
