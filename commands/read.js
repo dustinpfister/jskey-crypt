@@ -3,22 +3,6 @@ yaml = require('js-yaml'),
 fs = require('fs'),
 simpleC = require('../lib/simple_crypt');
 
-let readFile = (path_file, key) => {
-    return new Promise((resolve, reject) => {
-        fs.readFile(path_file, 'utf8', (e, data) => {
-            if (e) {
-                reject(e);
-            } else {
-                if (key) {
-                    resolve(simpleC.fromHex(data, key));
-                } else {
-                    resolve(data);
-                }
-            }
-        });
-    });
-};
-
 // READ COMMAND
 exports.command = 'read';
 exports.aliases = ['r'];
@@ -45,10 +29,10 @@ exports.handler = function (argv) {
     let path_file = path.join(argv.t, argv.f);
 
     // read key file
-    readFile(argv.k)
+    simpleC.readFile(argv.k)
     .then((data) => {
         let key = yaml.safeLoad(data);
-        return readFile(path_file, {
+        return simpleC.readFile(path_file, {
             password: key.key
         })
     })
