@@ -19,9 +19,14 @@
 
 ## 0.1.x - Alpha II - file system lib and init import option
   * (done) simple_crypt_fs file system module started
-  * simple_crypt_fs file system module can be used to walk files
-  * simple_crypt_fs file system module can cipher or decipher for each file
-  * simple_crypt_fs find key.yaml method
+  * (done) simple_crypt_fs find key.yaml method
+  * (done) init command - creates a key.yaml with proper password, and random value
+  * init command - key.yaml file updated to include value for random (iv value)
+  * init command - key.yaml file updated to contain algorithm
+  * simple_crypt can return a cipher object to be used in streams
+  * file io methods moved from simple_crypt to simple_crypt_fs
+  * simple_crypt_fs file system module can be used to walk files and cipher or decipher for each file
+  * simple_crypt_fs file system module can read from standard input, and write to a file (write stream)
   * read and write files moved from simple_crypt to simple_crypt_fs
   * init command can create a new blog_posts folder from a _posts folder via an i (import option)
   * read command can be used to create a _posts folder from _posts_crypt

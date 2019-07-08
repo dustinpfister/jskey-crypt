@@ -31,10 +31,8 @@ exports.handler = function (argv) {
     // read key file
     simpleC.readFile(argv.k)
     .then((data) => {
-        let key = yaml.safeLoad(data);
-        return simpleC.readFile(path_file, {
-            password: key.key
-        })
+        let keyFile = yaml.safeLoad(data);
+        return simpleC.readFile(path_file, keyFile);
     })
     .then((data) => {
         console.log(data.toString());

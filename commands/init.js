@@ -17,10 +17,12 @@ let makeFolder = (dir_project) => {
 };
 
 // make key.yaml
-let makeKeyFile = (dir_project, key) => {
+let makeKeyFile = (dir_project, key, password, random) => {
     return new Promise((resolve, reject) => {
         let data = yaml.safeDump({
-                key: key
+                key: key,
+                password: password,
+                random: random
             });
         fs.writeFile(path.join(dir_project, 'key.yaml'), data, (e) => {
             if (e) {
@@ -64,6 +66,16 @@ exports.builder = {
     k: {
     default:
         'spaceballs'
+    },
+    // password
+    p: {
+    default:
+        'spaceballs-0123456789-abcdefghi!'
+    },
+    // random
+    r: {
+    default:
+        '0123456789abcdef'
     }
 };
 exports.handler = function (argv) {
@@ -72,14 +84,13 @@ exports.handler = function (argv) {
     dir_posts_crypt = path.join(dir_target, '_posts_crypt');
 
     makeFolder(dir_target).then(() => {
-        console.log('target folder ' + argv.t + ' created at: ');
-        console.log(dir_target);
-        return makeKeyFile(dir_target, argv.k);
+        console.log('target folder ' + argv.t + ' created at: ' + dir_target);
+        return makeKeyFile(dir_target, argv.k, argv.p, argv.r);
     }).then(() => {
         return makeFolder(dir_posts_crypt);
     }).then(() => {
         return makeFirstPost(dir_posts_crypt, {
-            password: argv.k
+            password: argv.p
         });
     }).then(() => {
 
