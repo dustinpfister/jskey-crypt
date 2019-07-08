@@ -20,6 +20,7 @@
 ## 0.1.x - Alpha II - init import option
   * simple_crypt_fs file system module can be used to walk files
   * simple_crypt_fs file system module can cipher or decipher for each file
+  * simple_crypt_fs find key.yaml method
   * read and write files moved from simple_crypt to simple_crypt_fs
   * init command can create a new blog_posts folder from a _posts folder via an i (import option)
   * read command can be used to create a _posts folder from _posts_crypt
