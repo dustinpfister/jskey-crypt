@@ -17,7 +17,8 @@
   * init command now creates a conf.yaml as well
   * conf.yaml has a keyfile property that gives the pathname to the key.yaml file to use
 
-## 0.1.x - Alpha II - init import option
+## 0.1.x - Alpha II - file system lib and init import option
+  * (done) simple_crypt_fs file system module started
   * simple_crypt_fs file system module can be used to walk files
   * simple_crypt_fs file system module can cipher or decipher for each file
   * simple_crypt_fs find key.yaml method
