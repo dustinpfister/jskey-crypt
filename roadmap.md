@@ -18,7 +18,11 @@
   * conf.yaml has a keyfile property that gives the pathname to the key.yaml file to use
 
 ## 0.1.x - Alpha II - init import option
+  * simple_crypt_fs file system module can be used to walk files
+  * simple_crypt_fs file system module can cipher or decipher for each file
+  * read and write files moved from simple_crypt to simple_crypt_fs
   * init command can create a new blog_posts folder from a _posts folder via an i (import option)
+  * read command can be used to create a _posts folder from _posts_crypt
 
 ## 0.0.x - Alpha I - first release
   * (done) Uses yargs and a default command fires when called with no arguments
@@ -27,3 +31,4 @@
   * (done) can read an encrypted file in a _posts_crypt folder (read command)
   * (done) can create an encrypted file in a _posts_crypt folder from a file (write command)
   * (done) functions repeated in current commands pulled into a lib
+  * (done) default command gives version number in package.json
