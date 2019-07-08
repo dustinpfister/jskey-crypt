@@ -26,4 +26,4 @@
   * (done) can create a new /blog_posts folder with a keys.yaml file and a /blog_posts/_posts_crypt folder (init command)
   * (done) can read an encrypted file in a _posts_crypt folder (read command)
   * (done) can create an encrypted file in a _posts_crypt folder from a file (write command)
-  * functions repeated in current commands pulled into a lib
+  * (done) functions repeated in current commands pulled into a lib
