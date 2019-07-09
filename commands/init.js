@@ -59,7 +59,7 @@ exports.builder = {
     // target folder
     t: {
     default:
-        'blog_posts'
+        'site_foo'
     },
     // password
     p: {
@@ -84,7 +84,8 @@ exports.handler = function (argv) {
         return makeFolder(dir_posts_crypt);
     }).then(() => {
         return makeFirstPost(dir_posts_crypt, {
-            password: argv.p
+            password: argv.p,
+            random: argv.r
         });
     }).then(() => {
 
