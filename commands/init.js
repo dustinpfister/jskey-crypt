@@ -17,9 +17,10 @@ let makeFolder = (dir_project) => {
 };
 
 // make key.yaml
-let makeKeyFile = (dir_project, password, random) => {
+let makeKeyFile = (dir_project, algorithm, password, random) => {
     return new Promise((resolve, reject) => {
         let data = yaml.safeDump({
+                a: algorithm,
                 password: password,
                 random: random
             });
@@ -61,12 +62,17 @@ exports.builder = {
     default:
         'site_foo'
     },
-    // password
+    // algorithm that will be used with createCipheriv
+    a: {
+    default:
+        'aes-256-cbc'
+    },
+    // password ( will be used to create key for createCipheriv )
     p: {
     default:
         'spaceballs-0123456789-abcdefghi!'
     },
-    // random
+    // random ( will be used to create IV for createCipheriv )
     r: {
     default:
         '0123456789abcdef'
@@ -79,7 +85,7 @@ exports.handler = function (argv) {
 
     makeFolder(dir_target).then(() => {
         console.log('target folder ' + argv.t + ' created at: ' + dir_target);
-        return makeKeyFile(dir_target, argv.p, argv.r);
+        return makeKeyFile(dir_target, argv.a, argv.p, argv.r);
     }).then(() => {
         return makeFolder(dir_posts_crypt);
     }).then(() => {
