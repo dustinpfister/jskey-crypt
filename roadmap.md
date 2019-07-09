@@ -21,7 +21,7 @@
   * (done) simple_crypt_fs file system module started
   * (done) simple_crypt_fs find key.yaml method
   * (done) init command - creates a key.yaml with proper password, and random value
-  * init command - key.yaml file updated to include value for random (iv value)
+  * (done) init command - key.yaml file updated to include value for random (iv value)
   * init command - key.yaml file updated to contain algorithm
   * simple_crypt can return a cipher object to be used in streams
   * file io methods moved from simple_crypt to simple_crypt_fs
