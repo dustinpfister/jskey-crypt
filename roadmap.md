@@ -31,6 +31,7 @@
   * (done) init command - creates a key.yaml with proper password, and random value
   * (done) init command - key.yaml file updated to include value for random (iv value)
   * (done) init command - key.yaml file updated to contain algorithm
+  * (done) simple_crypt - fixed a bug because the random value given was a number rather than a string
   * simple_crypt can return a cipher object to be used in streams
   * file io methods moved from simple_crypt to simple_crypt_fs
   * simple_crypt_fs file system module can be used to walk files and cipher or decipher for each file
