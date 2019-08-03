@@ -1,4 +1,10 @@
-## 0.1.x - Alpha II - file system lib and init import option
+## 1.0.x - Standard input and output option
+  * new pipe command that can be used to just pipe data in and out
+  * pipe command can accept input from the standard input
+  * pipe command can output to the standard output rather than a file
+  * pipe command works by giving arguments for key, iv, and so forth from command line
+
+## 0.1.13 - Alpha II - file system lib and some minor updates
   * (done) simple_crypt_fs file system module started
   * (done) simple_crypt_fs find key.yaml method
   * (done) init command - creates a key.yaml with proper password, and random value
