@@ -2,7 +2,7 @@
 
 So I started a project called jskey that aims to be a markdown editor, and keyword database management tool that has a great deal a functionality and features both built in and extensible via a plug-in system. However I did not get far, as I think that I was trying to do way to much all within a single application. So now I am trying out an approach that involves breaking things down into a whole bunch of smaller independent applications that can potentially be used together.
 
-This project jskey-crypt has to do with creating, and exporting an encrypted blog posts folder, as well as the keyword database also. In any case it just has one little thing that it needs to do and it is not much of anything more beyond that.
+So then this project jskey-crypt has to do with JUST the crypto part of the project as I would like for asset files mainly the markdown source of a website I am working on to be encrypted. This is to help address concerns that I have with duplicate content, and theft of ip that I have not published yet that might be stored in a public repository.
 
 ## Install
 
