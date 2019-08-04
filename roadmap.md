@@ -1,3 +1,8 @@
+## 1.1.x - pbkdf2 use to create keys
+  * node crypto.pbkdf2 method now used to generate the key that will be used for createCipheriv
+  * a i option can be used in the pipe command to set the number of iterations to use with pbkdf2
+  * a d option can be used to set digest for pbkdf2
+
 ## 1.0.x - Standard input and output option
   * (done) new pipe command that can be used to just pipe data in and out
   * (done) pipe command can accept input from the standard input
