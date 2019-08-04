@@ -12,11 +12,18 @@ exports.builder = {
     // the algorithm
     a: { default: 'aes-256-cbc' },
     // crypt or decrypt
-    c: { default: false}
+    c: { 
+        default: false,
+        type: 'boolean'
+    }
 };
 exports.handler = function (argv) {
 
-    let method = simpleC.crypt;
+    //let method = simpleC.crypt;
+    
+    let method = argv.c ? simpleC.crypt : simpleC.decrypt;
+    
+    console.log(argv.c);
     
     process.stdin.on('data', (data) => {
             
