@@ -19,15 +19,16 @@ exports.builder = {
 };
 exports.handler = function (argv) {
 
-    //let method = simpleC.crypt;
-    
-    let method = argv.c ? simpleC.crypt : simpleC.decrypt;
-    
-    console.log(argv.c);
+    let method = argv.c ? simpleC.toHex : simpleC.fromHex;
+    //let method = argv.c ? simpleC.toHex : function(data){
+    //    return data.toString();
+    //};
     
     process.stdin.on('data', (data) => {
             
-        console.log( method(data).toString('hex') );
+        data = argv.c ? data : data.toString('utf8');
+        
+        console.log( method(data).toString() );
             
     });
 
