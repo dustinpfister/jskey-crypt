@@ -19,3 +19,21 @@ $ npm install -g
 ```
 
 The project should be installed globally, as this is a command line tool intended to be used in more than one file system location.
+
+## pipe command
+
+So to crypt something with the pipe command. Type pipe after jskey-crypt, when doing so jskey-crypt will now accept input from the standard input. The c option should be used to crypt data to hex, otherwise the password and salt are just needed when decrypting.
+
+A crypt example from the command line with pipe
+
+```
+$ echo this-is-private | jskey-crypt pipe -c -p password -s af54bcaa
+30d197c0aa5b6a4acf024ded14f3805bca04c5945f0bde3c2915939d20f0e420
+```
+
+A decript example with pipe.
+
+```
+$ echo 30d197c0aa5b6a4acf024ded14f3805bca04c5945f0bde3c2915939d20f0e420 | jskey-crypt pipe -p password -s af54bcaa
+this-is-private
+```
