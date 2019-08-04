@@ -1,7 +1,7 @@
 ## 1.0.x - Standard input and output option
-  * new pipe command that can be used to just pipe data in and out
-  * pipe command can accept input from the standard input
-  * pipe command can output to the standard output rather than a file
+  * (done) new pipe command that can be used to just pipe data in and out
+  * (done) pipe command can accept input from the standard input
+  * (done) pipe command can output to the standard output rather than a file
   * pipe command works by giving arguments for key, iv, and so forth from command line
 
 ## 0.1.13 - Alpha II - file system lib and some minor updates

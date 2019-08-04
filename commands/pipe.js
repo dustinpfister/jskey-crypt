@@ -20,15 +20,23 @@ exports.builder = {
 exports.handler = function (argv) {
 
     let method = argv.c ? simpleC.toHex : simpleC.fromHex;
-    //let method = argv.c ? simpleC.toHex : function(data){
-    //    return data.toString();
-    //};
     
+    // on standard input
     process.stdin.on('data', (data) => {
             
         data = argv.c ? data : data.toString('utf8');
         
-        console.log( method(data).toString() );
+        // use simpleC
+        let opt = {
+            password: argv.p,
+            random: argv.s,
+            a: argv.a
+        };
+        
+        //console.log(opt);
+        // log output
+        let out = method(data, opt).toString();
+        console.log( out );
             
     });
 
